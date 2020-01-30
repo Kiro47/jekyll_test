@@ -7,47 +7,39 @@ highlighter: null
 markdown: kramdown
 extensions: [fenced_code_blocks]
 excerpt_separator: "<!--more-->"
-url: https://heliumjk.github.io
-baseurl: "/heliumjk.github.io"
+url: https://www.csl.mtu.edu
+baseurl: "/classes/cs4760/www/projects/s20/group2/www"
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
-data-ad-slot: 2973388149
-data-ad-client: ca-pub-9204963049240271
-google_ad_client: ca-pub-9204963049240271
+data-ad-slot: ''
+data-ad-client: ''
+google_ad_client: ''
 
 post_limit: 5
 
 
-title : Helium Jekyll
-tagline: Bootstrap 4 UI kit for jekyll
-author : 
-  name : Antonio Trento
-  site: https://lantoniotrento.github.io
-  description : I&#39;m a web master interested in communication applied to web marketing.
+title : The Berry Bunch
+tagline: "Backyard Berries"
+author :
+  name : Berry Bunch
+  site: https://www.csl.mtu.edu//classes/cs4760/www/projects/s20/group2/www/
+  description : "CS4760, HU4628 & CS5760: Human-Computer Interactions & Usability"
   image : social-image.png
-  email : lantoniotrento@gmail.com
-  github : antoniotrento
-  twitter : lantoniotrento
-  facebook: lantoniotrento
-  linkedin: antoniotrento
-  instagram: lantoniotrento
-  pinterest: antoniotrento
-  feedburner : 
+  email : the-berry-bunch-l@mtu.edu
+  github :
+    #  twitter : lantoniotrento
+  #  facebook: lantoniotrento
+  #  linkedin: antoniotrento
+  #  instagram: lantoniotrento
+  #  pinterest: antoniotrento
+  #  feedburner :
 
-twitter_username: lantoniotrento
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : https://heliumjk.github.io
+location : "Houghton, Michigan"
 
+    #twitter_username: Berry Bunch
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
@@ -75,7 +67,7 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : https://heliumjk.github.io
+  BASE_PATH : /classes/cs4760/www/projects/s20/group2/www
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
@@ -85,7 +77,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : https://heliumjk.github.io/assets/themes/bootstrap
+  ASSET_PATH :
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -102,12 +94,12 @@ JB :
   #
   comments :
     provider : disqus
-    disqus : 
-      short_name : jeky-new-age
+    disqus :
+      short_name : berry-bunch
     #livefyre :
-    #  site_id : 
+    #  site_id :
     #intensedebate :
-    #  account : 
+    #  account :
     #facebook :
     #  appid :
       num_posts: 5
@@ -119,7 +111,7 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #
   analytics :
-    provider : google
+    provider :
     google :
         tracking_id : 'UA-94080000-1'
     getclicky :

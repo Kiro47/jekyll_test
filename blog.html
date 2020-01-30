@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: Blog
+title: Documents
 group: navigation
 tags : [blog, posts, post]
 author : Antonio Trento
-css: 
+css:
 js:
 keywords: bootstrap4, UI kit, jekyll
 canonical: https://heliumjk.github.io/blog
@@ -14,9 +14,9 @@ canonical: https://heliumjk.github.io/blog
 
 {% for post in site.posts %}
 	  <div class="blog-block post-content-area">
-	   {% if post.img %}	  
+	   {% if post.img %}
             <img src="{{ BASE_PATH }}/assets/images/{{ post.img }}" alt="{{ post.title }} image">
-	   {% endif %}	  
+	   {% endif %}
             <div class="blog-post">
               <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
 	      <p>{{ post.excerpt }}</p>
