@@ -1,4 +1,10 @@
 .doc-buttons {
+    background-color: #BF1E2E;
+    color: white;
+}
+
+.doc-buttons:hover {
     color: #BF1E2E;
-    background-color:#283891;
+    border-style: groove;
+    border-color: black;
 }
