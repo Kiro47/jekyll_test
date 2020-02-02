@@ -1,96 +1,74 @@
-# Helium Jekyll
-## A new Bootstrap 4 theme
-
-## The project is no longer mantained
-
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
-
-Helium is a fast, modern and configurable [Jekyll](http://jekyllrb.com/) theme with some tricks up it's sleeve. It has a live theme switcher and it's main blog layout display prominent hero images for posts with colored overlays and nice animations.
-
-[Bootstrap theme source](https://uideck.com/products/helium-ui-kit/)
-
-![helium sample](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot.jpg)
-![helium theme](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot1.jpg)
-
-## Features
-Though minimalistic-looking by nature, dactl is easily configurable and includes quite a lot of niceties:
-
-Main features:
-* [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
-* [Font Awesome](http://fontawesome.io/)
-* 100+ UI Blocks
-* Responsive design
-
-Jekyll-specific features:
-* Fully compatible with Jekyll 3.x and GitHub Pages
-* SEO optimized
-* [Google Analytics](https://www.google.com/analytics/) support
-* [Google AdSense](https://www.google.com/adsense/start/) support
-* [Disqus](https://disqus.com/) comments support
-
-Other features:
-* Blog page
-* Landing page samples
-* Tags functionality and tags pages
-* Link posts functionality
-* Mobile slider scrolling
-* Emoji support ⚡️⚡️⚡️ by copy paste from [getemoji](http://getemoji.com/)
-
-Some of the features listed above can be easily configured or disabled by you.
-
-## Information about Helium
-At it's core, dactl is a forked version of [sentenza](https://github.com/sentenza/jekyll-material-design) but it has been almost entirely rewritten from scratch.  
-I have just started my journey in the world of web development, learning new things on the way.  
-Looking for a way to put my newly acquired skills to test I found Jekyll and I quickly realized that it's going to be a good learning experience since I don't like building 'dummy' projects.  
-I've built this theme as a way to develop my skills further.
-
-You can find credits at the bottom of this Readme file.  
-**All** feedback is welcome, both positive and negative.
-
-## Installation
-### Running locally
-Assuming you've got Jekyll [installed](https://jekyllrb.com/docs/installation/), clone or download this repo, `cd` into the folder and run `jekyll serve`.
-
-### Hosting on GitHub
-Fork this repo and rename it to `yourusername.github.io`... and edit the `_config.yaml` file whit your github address and your links (such as social media username, email, name, ecc.)!  
-Your new helium-themed Jekyll blog should be up and running at yourusername.github.io.  
+# The Berry Bunch Website deployer
 
 
-## Additional information about some features
-### Hero images and blog layout
-Liquid 'script' which is used to append correct hero image and overlay color as set in post YAML Front matter was written by me and while it's really basic it functions properly.  
-You can read more about it and see the code in `include/utils/hero.html`.
+## What is this?
+Essentially in the name of time, and making a quick and easy website we are
+using a templating engine called Jekyll to make things easier on us in a way.
+It essentially processes everything via some subcommands and makes a decent
+looking website with minimal effort.
+The deployment script also properly sets all the permissions for the website
+and changed the group setting to ensure we should all be able to modify it
+the right way.
 
-#### Tags & Tags Pages
-Tags and tag pages are supported by using Jekyll's native collections functionality.  
+https://jekyllrb.com/
 
-## Credits
-### Resources used
-- [Helium B4](https://uideck.com/products/helium-ui-kit/)
-- [Font Awesome](http://fontawesome.io/)
-- [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
 
-### Inspiration and thoughtful code-jacking
-Inspiration and bits of things listed below are present inside dactl's code:
-- [Daktilo](https://github.com/kronik3r/daktilo) - dactl is based on Daktilo and inherits it's one-column layout.
-- [Hydejack](https://github.com/qwtel/hydejack/) - I've learned a lot about Jekyll when I took apart [@qwtel](https://github.com/qwtel/)'s excellent fork of [Hyde](https://github.com/poole/hyde) theme. I embraced his more partials = everything is easier to edit policy. Hydejack theme gave me an idea on how to create hero images liquid scripting, loading google fonts and using rem's/em's and more.
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) - This guy makes awesome themes and writes a lot about Jekyll and it's more obscure use cases on his blog, [Made Mistakes](https://mademistakes.com). Looking through his theme's code - Minimal Mistakes in particular - gave me lot of information about how to build a robust theme and how to make it configurable within `_config.yml`
-- [Trophy](https://github.com/thomasvaeth/trophy-jekyll) - Link border slide animation SASS mixin which I slightly modified to be able to easily change the direction of the animation.
-- Various blog posts about Jekyll and [Stackoverflow](https://www.stackoverflow.com) posts with useful [Liquid](https://github.com/Shopify/liquid) snippets.
+## How do I deploy the webpage when changes are made?
+Just run `deploy.bash` script in `/local/group_projects/cs4760/s20/group2/` ,
+this should run everything fine using the renv environment setup.
 
-## License
-All parts of helium Jekyll theme are free to use and abuse under the open-source [MIT license](http://opensource.org/licenses/mit-license.php).
+Assuming this doesn't work and you get an error go yell at @jchelm because he
+did a dumb thing in setting it up.  Please also copy and paste the error.
 
-## TO DO
-- [ ] Add Ads Block to home page 
-- [ ] Minimize `.css` in `<head>` and all images for faster load times
-- [ ] 404 page styles
-- [ ] Create hightlight style for code parts
 
-## Help out
-Im [Antonio Trento](https://antoniotrento.github.io) and I'm looking for funds to be able to open my IT development company with many on-site projects, unfortunately they are hardly feasible without collaboration and an economic base.
+## How do I add documents to the documents web page?
+Copy the documents to `deploy_assets/assets/documents/` and ensure you set the
+right permissions on it.  A quick way to do this is with the following command
+that you run in the terminal:
+```bash
+chown -R "${USER}:cs4760.2" '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
+chmod 554 -R '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
+```
+After this just deply the webpage with the `deploy.bash` script, it'll get
+automagically added to the web page.
 
-If you want to contribute you can donate ethereum or bitcoin:
-- [Donate Bitcoins](https://blockchain.info/address/1B9rDoFCndbsKXL9QiefUcUGUbJH9Y1i6M)
+If you're interested in how this is done, it's handled in the `documents.html`
+file.
+
+## Modifying the website
+Instead of modifying the website directly modify the templates in the
+`deploy_assets` directory.  Info on that can be found here:
+https://jekyllrb.com/docs/pages/
+
+### Special Variables
+Since Jekyll is a templating engine you are able to use variables to make life
+easier.  For example, for linking other websites pages you can add
+`{{ BASE_PATH }}` as the prefix, which gets replaced as the really dumb
+`/classes/cs4760/www/projects/s20/group2/www/` (since we own only a small
+subset of the website).
+An example of this is including a CSS file:
+```html
+<link rel="stylesheet" href="{{ BASE_PATH }}/assets/css/documents.css">
+```
+A common list of them are available here: https://jekyllrb.com/docs/variables/
+Many of our custom ones come from the `_config.yml` file which can be accessed
+by `site`.
+
+
+### Special macros
+There are also some other magic macros in the format of `{% macro %}`, a
+common one you'll find in our page is `{% include JB/setup %}` which
+does a lot to build the header, navigation, and footer components (the general
+page components) and embeds the rest of the content inside of that.  These
+macro functions also support logical statements such as if and else.
+A common one is `includes` https://jekyllrb.com/docs/includes/
+
+The macro engine itself is `Liquid` which has docs here:
+https://shopify.github.io/liquid/filters/default/
+
+### Front matter
+Front matter is the magic sauce jekyll uses to determine what to do with a
+given file.  It's pretty simple and obvious to use for the most part.
+Details here: https://jekyllrb.com/docs/front-matter/
+
+

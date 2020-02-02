@@ -4,7 +4,7 @@ WEB_DIR="/group_projects/cs4760/s20/group2/www/"
 ASSET_DIR="${WEB_DIR}../deploy_assets/"
 GROUP="cs4760.2"
 
-source "../renv/activate"
+source "/group_projects/cs4760/s20/group2/renv/activate"
 
 # Functions
 
