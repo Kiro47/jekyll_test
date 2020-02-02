@@ -11,25 +11,102 @@ permalink: /docs.html
 {% include JB/setup %}
 <link rel="stylesheet" href="{{ BASE_PATH }}/assets/css/documents.css">
 <div id="documents-div">
-{% for document in site.static_files %}
-    {% if document.path contains 'assets/documents/' %}
-    <div id="documents-container">
-    {% assign docpath = document.path | split: "/" %}
-    <a href="{{ site.baseurl }}{{ document.path }}"
-      class="
-        {% for subpath in docpath %}
-          {% if forloop.index0 == 3 %}
-            {{ subpath }}
-          {% endif %}
-        {% endfor %}
-        " />
-      <button type="button" class="btn btn-primary btn-lg btn-block doc-buttons">
-        {{document.basename}}
-      </button>
-    </a>
-    </br></br>
-    </div>
-  {% endif %}
-{% endfor %}
+
+  <div id="documents-div-scientist_meetings_min">
+    <h2> Scientist Meeting Notes </h2>
+    {% for document in site.static_files %}
+        {% if document.path contains 'assets/documents/Scientist Meeting Notes' %}
+        <div id="documents-container">
+        {% assign docpath = document.path | split: "/" %}
+        <a href="{{ site.baseurl }}{{ document.path }}"
+          class="
+            {% for subpath in docpath %}
+              {% if forloop.index0 == 3 %}
+                {{ subpath }}
+              {% endif %}
+            {% endfor %}
+            " />
+          <button type="button" class="btn btn-primary btn-lg btn-block doc-buttons">
+            {{document.basename}}
+          </button>
+        </a>
+        </br></br>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="documents-div-meeting_min">
+    <h2> Meeting Minutes </h2>
+    {% for document in site.static_files %}
+        {% if document.path contains 'assets/documents/Meeting Minutes/' %}
+        <div id="documents-container">
+        {% assign docpath = document.path | split: "/" %}
+        <a href="{{ site.baseurl }}{{ document.path }}"
+          class="
+            {% for subpath in docpath %}
+              {% if forloop.index0 == 3 %}
+                {{ subpath }}
+              {% endif %}
+            {% endfor %}
+            " />
+          <button type="button" class="btn btn-primary btn-lg btn-block doc-buttons">
+            {{document.basename}}
+          </button>
+        </a>
+        </br></br>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="documents-div-design">
+    <h2> Design Documents </h2>
+    {% for document in site.static_files %}
+        {% if document.path contains 'assets/documents/Design Documents/' %}
+        <div id="documents-container">
+        {% assign docpath = document.path | split: "/" %}
+        <a href="{{ site.baseurl }}{{ document.path }}"
+          class="
+            {% for subpath in docpath %}
+              {% if forloop.index0 == 3 %}
+                {{ subpath }}
+              {% endif %}
+            {% endfor %}
+            " />
+          <button type="button" class="btn btn-primary btn-lg btn-block doc-buttons">
+            {{document.basename}}
+          </button>
+        </a>
+        </br></br>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="documents-div-database">
+    <h2> Databases Documents </h2>
+    {% for document in site.static_files %}
+        {% if document.path contains 'assets/documents/Database/' %}
+        <div id="documents-container">
+        {% assign docpath = document.path | split: "/" %}
+        <a href="{{ site.baseurl }}{{ document.path }}"
+          class="
+            {% for subpath in docpath %}
+              {% if forloop.index0 == 3 %}
+                {{ subpath }}
+              {% endif %}
+            {% endfor %}
+            " />
+          <button type="button" class="btn btn-primary btn-lg btn-block doc-buttons">
+            {{document.basename}}
+          </button>
+        </a>
+        </br></br>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
 </div>
 

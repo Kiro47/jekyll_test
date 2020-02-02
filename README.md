@@ -22,9 +22,10 @@ did a dumb thing in setting it up.  Please also copy and paste the error.
 
 
 ## How do I add documents to the documents web page?
-Copy the documents to `deploy_assets/assets/documents/` and ensure you set the
-right permissions on it.  A quick way to do this is with the following command
-that you run in the terminal:
+Copy the documents to `deploy_assets/assets/documents/$FOLDER` where `$FOLDER`
+is the proper folder you want to use and ensure you set the right permissions
+on it.  A quick way to do this is with the following command that you run
+in the terminal:
 ```bash
 chown -R "${USER}:cs4760.2" '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
 chmod 554 -R '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
@@ -71,4 +72,12 @@ Front matter is the magic sauce jekyll uses to determine what to do with a
 given file.  It's pretty simple and obvious to use for the most part.
 Details here: https://jekyllrb.com/docs/front-matter/
 
+An important one for note is 'permalink' and 'group' for our uses.
+Permalinks are super useful and we should always use them, simply set the
+permalink to be `/page_name.html`, for example our documents page is
+`/docs.html`. (The permalink name and file name don't have to correspond)
 
+Another important one is the `group`, specifically if the `group` is set to
+`navigation` then it will appear as one of the links available in the navigation
+bar.  The name there will correspond to the `title` of the page.  Once again
+`documents.html` has examples of this.
