@@ -28,7 +28,7 @@ on it.  A quick way to do this is with the following command that you run
 in the terminal:
 ```bash
 chown -R "${USER}:cs4760.2" '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
-chmod 554 -R '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
+chmod 774 -R '/local/group_projects/cs4760/s20/group2/deploy_assets/assets/documents'
 ```
 After this just deply the webpage with the `deploy.bash` script, it'll get
 automagically added to the web page.
